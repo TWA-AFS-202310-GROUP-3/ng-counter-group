@@ -1,18 +1,24 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CounterComponent } from './counter.component';
+import { CounterGroupComponent } from '../counter-group/counter-group.component';
 
 describe('CounterComponent', () => {
   let component: CounterComponent;
   let fixture: ComponentFixture<CounterComponent>;
+  //let groupComponent : CounterGroupComponent;
+  //let fixtureGroupComponent : ComponentFixture<CounterGroupComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CounterComponent]
+      declarations: [CounterComponent, CounterGroupComponent]
     });
     fixture = TestBed.createComponent(CounterComponent);
+    //fixtureGroupComponent = TestBed.createComponent(CounterGroupComponent);
     component = fixture.componentInstance;
+    //groupComponent = fixtureGroupComponent.componentInstance;
     fixture.detectChanges();
+    //fixtureGroupComponent.detectChanges();
   });
 
   it('should create', () => {
@@ -34,6 +40,12 @@ describe('CounterComponent', () => {
     component.onDecreaseNumber();
 
     expect(component.number).toEqual(1);
+  })
+
+  it('should be deleted when click the remove button', () => {
+    component.onRemoveCounter();
+
+    expect(component).toBeFalsy();
   })
 
 

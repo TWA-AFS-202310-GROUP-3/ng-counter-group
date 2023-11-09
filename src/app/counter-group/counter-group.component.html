@@ -2,7 +2,10 @@
     <counter 
     *ngFor="let counter of counters"
     [number]="counter.num"
+    [id]="counter.id"
     (change)="counter.num = $event"
+    (remove)="RemoveCounterWithIndex($event)"
+    (reset)="ResetCounterWithIndex($event)"
     ></counter>
 </div>
 <div class="d-flex justify-content-between">
@@ -11,6 +14,6 @@
         Reset
     </button>
 </div>
-<div (click)="onAdd()">
-    <button class="btn btn-primary">Add Counter</button>
+<div>
+    <button (click)="onAdd()" class="btn btn-primary">Add Counter</button>
 </div>

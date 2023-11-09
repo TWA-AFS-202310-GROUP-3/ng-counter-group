@@ -20,7 +20,7 @@ describe('CounterGroupComponent', () => {
   });
 
   it('should return the sum 2 when given counter list with [{name : 1}, {name : 1}]', () => {
-    component.counters = [{num : 1}, {num : 1}];
+    component.counters = [{num : 1, id : 0}, {num : 1, id : 1}];
 
     expect(component.sum).toEqual(2);
   })
@@ -35,11 +35,13 @@ describe('CounterGroupComponent', () => {
   })
 
   it('should reset num to 0 for all counters when click reset button', () => {
-    component.counters = [{num : 1}, {num : 1}];
+    component.counters = [{num : 1, id : 0}, {num : 1, id : 1}];
 
     component.onReset();
 
     expect(component.counters[0].num).toEqual(0);
     expect(component.counters[1].num).toEqual(0);
   })
+
+
 });
