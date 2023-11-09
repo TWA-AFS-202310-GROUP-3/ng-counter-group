@@ -25,9 +25,15 @@ describe('CounterComponent', () => {
     expect(component.number).toEqual(3)
   })
 
-  it('should dncrease number when call OnDecrease', ()=>{
+  it('should decrease number when call OnDecrease', ()=>{
     component.number = 2
     component.onDecrease()
     expect(component.number).toEqual(1)
+  })
+
+  it('should reset number when call OnResetOneCounter', ()=>{
+    component.number = 2
+    component.onResetOneCounter()
+    expect(component.number).toEqual(0)
   })
 });
