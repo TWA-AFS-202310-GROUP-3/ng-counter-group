@@ -19,5 +19,22 @@ describe('CounterComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should return 3 when onIncreaseNumber given number is 2', () => {
+    component.number = 2;
+
+    component.onIncreaseNumber();
+
+    expect(component.number).toEqual(3);
+  })
+
   
+  it('should return 1 when onDecreaseNumber given number is 2', () => {
+    component.number = 2;
+
+    component.onDecreaseNumber();
+
+    expect(component.number).toEqual(1);
+  })
+
+
 });
