@@ -2,7 +2,7 @@
 <!-- <app-counter *ngFor="let counter of counters, index as i" [number]="counter.num" (change)="counter.num = $event">
 </app-counter>
 <button (click)="removeCounter(i)" >Remove</button> -->
-<div *ngFor="let counter of counters; let i = index">
+<div class="counter-format" *ngFor="let counter of counters; let i = index">
     <app-counter [number]="counter.num" (change)="counter.num = $event"></app-counter>
     <button (click)="removeCounter(i)">Remove</button>
 </div>

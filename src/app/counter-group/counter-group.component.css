@@ -1,0 +1,8 @@
+.counter-format {
+    display: flex;
+    align-items: center;
+  }
+  
+  .counter-format app-counter {
+    margin-right: 10px;
+  }
