@@ -11,4 +11,13 @@ export class CounterGroupComponent {
     {num: 2},
     {num: 3}
   ];
+  
+  get sum() {
+    let sum_c = 0;
+    this.counters.forEach(counter => {
+      sum_c += counter.num
+    })
+    return sum_c;
+    // return this.counters.reduce((result, current) => result + current.num, 0)
+  }
 }
