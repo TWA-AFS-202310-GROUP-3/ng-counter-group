@@ -19,4 +19,8 @@ export class CounterGroupComponent {
   OnAdd(){
     this.counters.push({num: 0})
   }
+
+  OnResetCounters() {
+    this.counters.forEach(counter => counter.num = 0);
+  }
 }
