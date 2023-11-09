@@ -24,5 +24,12 @@ export class CounterGroupComponent {
     this.counters.push({num: 0})
   }
 
+  onResetAll(){
+    this.counters.forEach(element => {
+      element.num = 0
+    })
+
+  }
+
 
 }
