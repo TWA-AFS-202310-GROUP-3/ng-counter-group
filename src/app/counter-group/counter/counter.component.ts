@@ -27,7 +27,6 @@ export class CounterComponent {
     this.valueChange.emit(this.counterNumber);
   }
   onDelete(): void {
-    console.log("remove counter id", this.counterId);
     this.visibleChange.emit(this.counterId);
   }
 
