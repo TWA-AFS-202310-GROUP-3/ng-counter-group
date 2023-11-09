@@ -18,4 +18,17 @@ describe('CounterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should increase number when call onIncreaseNumber', () => {
+    component.number = 2;
+    component.onIncreaseNumber();
+    expect(component.number).toEqual(3);
+  })
+
+  it('should decrease number when call onDecreaseNumber', () => {
+    component.number = 2;
+    component.onDecreaseNumber();
+    expect(component.number).toEqual(1);
+  })
 });
+
