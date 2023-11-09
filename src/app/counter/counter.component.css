@@ -1,0 +1,17 @@
+.add-button {
+  margin-right: 10px;
+  margin-left: 70px;
+}
+
+.decrease-button {
+  margin-left: 10px;
+}
+
+.button:hover {
+  background-color: rgb(151, 185, 255);
+  border: solid rgb(151, 185, 255);
+}
+
+.reset-button {
+  margin-left: 40px;
+}
