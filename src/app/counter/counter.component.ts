@@ -22,4 +22,9 @@ export class CounterComponent {
     this.change.emit(this.number)
   }
 
+  resetCounter() {
+    this.number=0
+    this.change.emit(this.number)
+  }
+
 }
