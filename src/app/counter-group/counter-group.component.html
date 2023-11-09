@@ -1,7 +1,9 @@
 <button (click)="OnAdd()">add counter</button>
 <app-counter *ngFor="let counter of counters; index as i;"
     [number]="counter.num"
+    [id]="i"
     (change)="counter.num = $event"
+    (remove)="removeCounter($event)"
 ></app-counter>
 <div>
     Sum: {{sum}}
