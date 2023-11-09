@@ -5,7 +5,6 @@ export interface Counter {
   id: string;
   num: number,
   visible: boolean
-
 }
 
 @Component({
@@ -39,5 +38,4 @@ export class CounterGroupComponent {
   get counterSum(): number {
     return this.counters.reduce((sum, counter) => sum + counter.num, 0);
   }
-
 }

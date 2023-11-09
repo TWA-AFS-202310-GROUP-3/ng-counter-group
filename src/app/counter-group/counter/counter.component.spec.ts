@@ -44,4 +44,19 @@ describe('CounterComponent', () => {
     component.counterNumber = -1;
     expect(component.isShowDecreaseButton).toBeFalsy();
   });
+  it('should reset counterNumber to 0 when onReset', () => {
+    component.counterNumber = 11;
+    component.onReset();
+    expect(component.counterNumber).toEqual(0);
+  });
+  it('should increase counterNumber by 1 when onIncrease', () => {
+    component.counterNumber = 11;
+    component.onIncrease();
+    expect(component.counterNumber).toEqual(12);
+  });
+  it('should decrease counterNumber by 1 when onDecrease', () => {
+    component.counterNumber = 11;
+    component.onDecrease();
+    expect(component.counterNumber).toEqual(10);
+  });
 });
