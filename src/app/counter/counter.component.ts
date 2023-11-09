@@ -10,12 +10,16 @@ export class CounterComponent {
   @Output() change = new EventEmitter()   /* @Output 标记change是向外发射的事件 */
   /* 在html里，(change)="counter.num = $event",其中$event的值就是change发出来的 */
  
-  OnIncrease(){
+  onIncrease(){
     this.number ++
     this.change.emit(this.number)
   }
-  OnDecrease(){
+  onDecrease(){
     this.number --
+    this.change.emit(this.number)
+  }
+  onResetOne(){
+    this.number = 0
     this.change.emit(this.number)
   }
 }

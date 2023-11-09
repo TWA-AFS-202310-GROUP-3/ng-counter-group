@@ -19,4 +19,10 @@ export class CounterGroupComponent {
       0)   /*这里0是reduce的初始值*/
       /* result是用于迭代计数的变量*/
   }
+
+  onAdd(){
+    this.counters.push({num: 0})
+  }
+
+
 }

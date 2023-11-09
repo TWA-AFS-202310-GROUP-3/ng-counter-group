@@ -21,13 +21,13 @@ describe('CounterComponent', () => {
 
   it('should increase number when call OnIncrease', ()=>{
     component.number = 2
-    component.OnIncrease()
+    component.onIncrease()
     expect(component.number).toEqual(3)
   })
 
   it('should dncrease number when call OnDecrease', ()=>{
     component.number = 2
-    component.OnDecrease()
+    component.onDecrease()
     expect(component.number).toEqual(1)
   })
 });
