@@ -15,4 +15,8 @@ export class CounterGroupComponent {
   get sum(){
     return this.counters.reduce((result, current) => result + current.num, 0)
   }
+
+  OnAdd(){
+    this.counters.push({num: 0})
+  }
 }
