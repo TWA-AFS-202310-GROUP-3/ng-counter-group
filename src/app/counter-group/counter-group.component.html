@@ -6,6 +6,6 @@
     <app-counter [number]="counter.num" (change)="counter.num = $event"></app-counter>
     <button (click)="removeCounter(i)">Remove</button>
 </div>
-<div>Sum:{{sum}}
+<div class="sum-format">Sum:{{sum}}
     <button (click)="reset()">Reset</button>
 </div>
