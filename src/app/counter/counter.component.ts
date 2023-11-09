@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
@@ -6,12 +6,16 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./counter.component.css']
 })
 export class CounterComponent {
-  @Input() number = 0
-  
+  @Input() number = 0     /* @Input 标记number是可以被外界设置的 */
+  @Output() change = new EventEmitter()   /* @Output 标记change是向外发射的事件 */
+  /* 在html里，(change)="counter.num = $event",其中$event的值就是change发出来的 */
+ 
   OnIncrease(){
     this.number ++
+    this.change.emit(this.number)
   }
   OnDecrease(){
     this.number --
+    this.change.emit(this.number)
   }
 }

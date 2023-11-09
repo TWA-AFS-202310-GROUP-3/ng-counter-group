@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { reduce } from 'rxjs';
 
 @Component({
   selector: 'app-counter-group',
@@ -11,4 +12,11 @@ export class CounterGroupComponent {
     {num: 2},
     {num: 3}
   ]
+
+  get sum(){
+    return this.counters.reduce(
+      (result, current) => result + current.num,
+      0)   /*这里0是reduce的初始值*/
+      /* result是用于迭代计数的变量*/
+  }
 }
