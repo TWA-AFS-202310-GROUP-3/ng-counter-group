@@ -1,5 +1,10 @@
-<div>
-    <button (click)="onDecreaseNumber()"  class="btn btn-primary">-</button>
+<div style="margin: 1px;">
+    <button (click)="onIncreaseNumber()" class="btn btn-primary">Plus</button>
     <span >Number: {{ number }}</span>
-    <button (click)="onIncreaseNumber()" class="btn btn-primary">+</button>
+   
+    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <button (click)="onDecreaseNumber()"  class="btn btn-primary">Minus</button>
+        <button type="button" class="btn btn-warning">Reset</button>
+        <button type="button" class="btn btn-danger">Remove</button>
+      </div>
 </div>
