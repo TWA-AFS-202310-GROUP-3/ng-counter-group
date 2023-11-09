@@ -15,4 +15,6 @@ export class CounterComponent {
   onDecreaseNumber() {
     this.number--;
   }
+
+  
 }
