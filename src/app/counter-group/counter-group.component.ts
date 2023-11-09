@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'counter-group',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./counter-group.component.css']
 })
 export class CounterGroupComponent {
+
   counters : {num: number}[] = [];
 }
