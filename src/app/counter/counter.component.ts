@@ -18,5 +18,8 @@ export class CounterComponent {
     this.change.emit(this.number);
   }
 
-  
+  onResetCurrentNumber() {
+    this.number = 0;
+    this.change.emit(this.number);
+  }
 }
