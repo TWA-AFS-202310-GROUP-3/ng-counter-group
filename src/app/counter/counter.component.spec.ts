@@ -30,5 +30,11 @@ describe('CounterComponent', () => {
     component.onDecreaseNumber();
     expect(component.number).toEqual(1);
   })
+
+  it('should reset number when call onResetCurrentNumber', () => {
+    component.number = 2;
+    component.onResetCurrentNumber();
+    expect(component.number).toEqual(0);
+  })
 });
 
