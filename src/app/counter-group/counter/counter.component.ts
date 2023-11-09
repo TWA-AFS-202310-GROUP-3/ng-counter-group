@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
@@ -8,13 +8,16 @@ import { Component, Input } from '@angular/core';
 
 export class CounterComponent {
   @Input() counterNumber: number = 0;
+  @Output() change = new EventEmitter();
 
   onIncrease(): void {
     this.counterNumber++;
+    this.change.emit(this.counterNumber);
   }
 
   onDecrease(): void {
     this.counterNumber--;
+    this.change.emit(this.counterNumber);
   }
 
   get isShowIncreaseButton(): boolean {
