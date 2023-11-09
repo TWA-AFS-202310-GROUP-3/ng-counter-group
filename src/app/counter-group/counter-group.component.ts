@@ -6,12 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./counter-group.component.scss']
 })
 export class CounterGroupComponent {
-  public sum: Number = 0;
-  public counters: { num: Number }[] = [
-    { num: 1 },
-    { num: 2 },
-    { num: 3 }
-  ];
+  public sum: number = 0;
+  public counters: { num: number }[] =
+    [
+      { num: 1 },
+      { num: 2 },
+      { num: 3 }
+    ];
 
   onCreateCounter(): void {
 
