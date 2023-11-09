@@ -2,7 +2,7 @@
     <button class="btn btn-primary">Create New Counter</button>
 </div>
 <div>
-    <label>Counters</label>
+    <counter *ngFor="let counter of counters"></counter>
 </div>
 <div class="d-flex justify-content-between">
     <label>SUM:</label>
