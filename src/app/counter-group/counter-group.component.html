@@ -1,9 +1,12 @@
-<p>counter-group works!</p>
-<button mat-raised-button color="primary" (click)="onCreateCounter()"> Create counter</button>
-<app-counter *ngFor="let counter of counters"
-             [counterNumber]="counter.num"
-             [counterId]="counter.id"
-             (valueChange)="counter.num = $event"
-             (visibleChange)="onDeleteCounter($event)"></app-counter>
-<span>Sum: {{counterSum}}</span>
-<button mat-raised-button color="warn" (click)="onReset()">Reset All</button>
+<div class="counter-grounp">
+  <button mat-raised-button color="primary" (click)="onCreateCounter()"> Create counter</button>
+  <app-counter *ngFor="let counter of counters"
+               [counterNumber]="counter.num"
+               [counterId]="counter.id"
+               (valueChange)="counter.num = $event"
+               (visibleChange)="onDeleteCounter($event)"></app-counter>
+  <div class="summary">
+    <span>Sum: {{counterSum}}</span>
+    <button mat-raised-button color="primary" (click)="onReset()">Reset All</button>
+  </div>
+</div>

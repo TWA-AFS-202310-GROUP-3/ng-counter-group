@@ -1,0 +1,28 @@
+.counter-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  border: solid #f2f2f2;
+
+  .summary {
+    margin-top: 20px;
+  }
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .single-counter {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+
+  button {
+    margin-right: 10px;
+  }
+}
