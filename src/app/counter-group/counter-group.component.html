@@ -5,6 +5,7 @@
     <counter 
     *ngFor="let counter of counters"
     [number]="counter.num"
+    (change)="counter.num = $event"
     ></counter>
 </div>
 <div class="d-flex justify-content-between">
