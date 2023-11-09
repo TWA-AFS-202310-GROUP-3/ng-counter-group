@@ -1,0 +1,32 @@
+.counter-format {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+.counter-format app-counter {
+    margin-right: 10px;
+  }
+
+.sum-format {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: larger;
+    color: rgb(126, 197, 255);
+  }
+
+button {
+  background-color: rgb(192, 224, 255);
+  color: white;
+  border-radius: 4px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  margin: 10px 10px 10px 10px;
+}
+
+button:hover {
+  background-color: rgb(114, 175, 255);
+}
