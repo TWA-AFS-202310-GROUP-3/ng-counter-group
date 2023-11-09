@@ -30,4 +30,11 @@ describe('CounterComponent', () => {
     component.onDecrease()
     expect(component.number).toEqual(4)
   })
+
+  it('should reset counters to 0 when call resetSum', () => {
+    component.resetCounter()
+    const resetCounter = component.number
+
+    expect(resetCounter).toBe(0)
+  })
 });
