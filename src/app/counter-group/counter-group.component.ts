@@ -22,8 +22,8 @@ export class CounterGroupComponent {
     this.counters.push({ num: 0 }) //.push() will add an item in list
   }
 
-  onRemove() {
-    //this.counters.
+  removeCounter(index: number) {
+    this.counters.splice(index, 1);
   }
 
   resetSum() {
