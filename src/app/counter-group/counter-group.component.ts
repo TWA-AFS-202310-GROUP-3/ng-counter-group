@@ -1,4 +1,12 @@
 import { Component } from '@angular/core';
+import { v4 } from 'uuid';
+
+export interface Counter {
+  id: string;
+  num: number,
+  visible: boolean
+
+}
 
 @Component({
   selector: 'app-counter-group',
@@ -6,15 +14,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./counter-group.component.scss']
 })
 export class CounterGroupComponent {
-  public counters: { num: number }[] =
-    [
-      { num: 1 },
-      { num: 2 },
-      { num: 3 }
-    ];
+  public counters: Counter[] = [];
 
   onCreateCounter(): void {
-    this.counters.push({num:0});
+    this.counters.push(
+      {
+        id: v4(),
+        num: 0,
+        visible: true
+      });
+    console.log(this.counters);
+  }
+
+  onReset(): void {
+    this.counters.forEach(counter => counter.num = 0);
+  }
+
+  onDeleteCounter(counterId: string): void {
+    this.counters.forEach((counter, index) => {
+      if (counter.id === counterId) this.counters.splice(index, 1);
+    });
   }
 
   get counterSum(): number {

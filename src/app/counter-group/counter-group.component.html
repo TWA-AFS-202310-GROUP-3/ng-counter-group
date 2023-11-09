@@ -2,6 +2,8 @@
 <button mat-raised-button color="primary" (click)="onCreateCounter()"> Create counter</button>
 <app-counter *ngFor="let counter of counters"
              [counterNumber]="counter.num"
-             (change)="counter.num = $event"></app-counter>
+             [counterId]="counter.id"
+             (valueChange)="counter.num = $event"
+             (visibleChange)="onDeleteCounter($event)"></app-counter>
 <span>Sum: {{counterSum}}</span>
-<button mat-raised-button color="warm">Reset</button>
+<button mat-raised-button color="warn" (click)="onReset()">Reset All</button>

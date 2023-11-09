@@ -1,5 +1,7 @@
 <div>
+  <button mat-raised-button color="primary" (click)="onReset()">Reset</button>
   <button *ngIf="isShowDecreaseButton" mat-raised-button (click)="onDecrease()">-</button>
   <span> number: {{counterNumber}}</span>
   <button *ngIf="isShowIncreaseButton" mat-raised-button (click)="onIncrease()">+</button>
+  <button mat-raised-button color="warn" (click)="onDelete()">Delete</button>
 </div>
