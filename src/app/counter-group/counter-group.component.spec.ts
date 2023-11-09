@@ -43,12 +43,13 @@ describe('CounterGroupComponent', () => {
     expect(component.counters.length).toEqual(initialCounterCount - 1)
   })
 
-  it('should reset sum to 0 and delete all counters when call resetSum', () => {
-    component.resetSum()
+  it('should reset numbers in counters to 0 when call resetSum', () => {
+    component.reset()
     const resetSum = component.sum
-    const resetCounterCount = component.counters.length
-
     expect(resetSum).toBe(0)
-    expect(resetCounterCount).toBe(0)
+
+    component.counters.forEach(counter => {
+      expect(counter.num).toBe(0)
+    })
   })
 });

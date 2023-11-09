@@ -26,8 +26,11 @@ export class CounterGroupComponent {
     this.counters.splice(index, 1);
   }
 
-  resetSum() {
-    this.counters = []
+  reset() {
+    //this.counters = []
+    this.counters.forEach(counter => {
+      counter.num = 0
+    })
   }
 
 }
