@@ -28,7 +28,10 @@ export class CounterGroupComponent {
     this.counters.forEach(element => {
       element.num = 0
     })
+  }
 
+  onDelete(index:number){
+    this.counters.splice(index, 1);
   }
 
 
