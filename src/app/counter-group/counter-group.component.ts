@@ -30,4 +30,8 @@ export class CounterGroupComponent {
       counter.num = 0;
     })
   }
+
+  onRemoveCounter(index: number) {
+    this.counters.splice(index, 1)
+  }
 }
