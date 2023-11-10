@@ -48,4 +48,8 @@ export class CounterGroupComponent {
       }
     })
   }
+
+  trackCounter(index : any, counter : counterData) {
+    return counter ? counter.id : undefined;
+  }
 }

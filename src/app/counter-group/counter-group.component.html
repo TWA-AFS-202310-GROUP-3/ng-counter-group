@@ -1,6 +1,6 @@
 <div>
     <counter 
-    *ngFor="let counter of counters"
+    *ngFor="let counter of counters; trackBy: trackCounter"
     [number]="counter.num"
     [id]="counter.id"
     (change)="counter.num = $event"

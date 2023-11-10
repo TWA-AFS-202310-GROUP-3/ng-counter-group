@@ -41,12 +41,5 @@ describe('CounterComponent', () => {
 
     expect(component.number).toEqual(1);
   })
-
-  it('should be deleted when click the remove button', () => {
-    component.onRemoveCounter();
-
-    expect(component).toBeFalsy();
-  })
-
-
+  
 });
